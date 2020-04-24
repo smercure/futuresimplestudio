@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Future Simple Studio is a Montreal-based architecture and design office founded by Christine Djerrahian."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="FUTURE SIMPLE STUDIO" />
+        <meta property="og:type" content="FUTURE SIMPLE STUDIO" />
+        <meta property="og:url" content="http://www.futuresimple.studio" />
+        <meta property="og:image" content="http://www.smercure.info/mf/logo.png" />
+        <title>FUTURE SIMPLE STUDIO</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type ="text/javascript" src="js/fss_script.js"></script>
+        <link rel="stylesheet" href="css/fss_stylesheet.css">
+    </head>
+
+    <body>
+        <div class="flex-container">
+            <div class="block1"> 
+                <div id="annimMobile"></div>
+
+                <!--ANIMATION FONT-->
+                <div class="anim">
+                    <div class="grid-container">
+                        <div class="grid-item"><span class="fifth">F</span><span class="sixth">UTURE</span></div>
+                    </div>
+                    <div class="center"><span class="fifth">S</span><span class="sixth">IMPLE</span></div>   
+                    <div class="grid-container">
+                        <div class="grid-item"> </div>
+                        <div class="grid-item"><span class="fifth">S</span><span class="sixth">TUDIO</span></div>
+
+                        <div class="grid-item"><span class="third">F</span><span class="forth">UTURE</span></div>
+                        <div class="grid-item"><span class="third">S</span><span class="forth">IMPLE</span></div>
+
+                        <div class="grid-item"><span class="third">S</span><span class="forth">TUDIO</span> </div>
+                        <div class="grid-item"> </div>
+
+                        <div class="grid-item"><span class="first">F</span><span class="second">UTURE</span></div>
+                        <div class="grid-item"><span class="first">S</span><span class="second">IMPLE</span></div>
+
+                        <div class="grid-item"> </div>
+                        <div class="grid-item"><span class="first">S</span><span class="second">TUDIO</span></div>
+
+                        <div class="grid-item"><span class="third">F</span><span class="forth">UTURE</span></div>
+                        <div class="grid-item"><span class="third">S</span><span class="forth">IMPLE</span></div>
+
+                        <div class="grid-item"><span class="third">S</span><span class="forth">TUDIO</span></div>
+                        <div class="grid-item"> </div>
+
+                        <div class="grid-item "><span class="fifth">F</span><span class="sixth">UTURE</span></div>
+                        <div class="grid-item " ><span class="fifth">S</span><span class="sixth">IMPLE</span></div>  
+                    </div>
+                </div>
+            </div>       
+                
+            <div class="block2"> 
+            
+            <!--CLICK SLIDESHOW AFTER AUTOMATIC SLIDESHOW DESKTOP-->
+            <div id="sliderTwo" style="display: none; position:relative; opacity:0;">
+                <div  style="height: 100%;" id="content" class="mySlides secondFont"><span class='fr' id='lang' onclick='language()'>Fr </span></div>   
+                <div  class="mySlides height" ><span class='minus' onclick="plusDivs(-1)">&larr; </span> <span class='plus' onclick="plusDivs(+1)"> &rarr;</span><img  src="image/Gauchetiere_3.jpg" ></div> 
+                <div  class="mySlides height" ><span class='minus' onclick="plusDivs(-1)">&larr; </span> <span class='plus' onclick="plusDivs(+1)"> &rarr;</span><img src="image/Gauchetiere_2.jpg" ></div> 
+                <div  class="mySlides height" ><span class='minus' onclick="plusDivs(-1)">&larr; </span> <span class='plus' onclick="plusDivs(+1)"> &rarr;</span><img src="image/Gauchetiere_1.jpg" ></div> 
+            </div>
+
+            <!--AUTOMATIC SLIDESHOW-->
+            <div id="annimDesktop">
+                <img id="img1" style="opacity: 1;" src="image/Gauchetiere_3.jpg" alt="">
+                <img id="img2" style="opacity: 0;" src="image/Gauchetiere_2.jpg" alt="">             
+                <img id="img3" style="opacity: 0;" src="image/Gauchetiere_1.jpg" alt=""> 
+            </div>
+        </div>  
+
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+            showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+                }
+            x[slideIndex-1].style.display = "block";  
+            }
+        </script>
+    </body>
+</html>
